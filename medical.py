@@ -25,7 +25,7 @@ if submitted:
         input_data = [[age, sex, bmi, children, smoker] + region_encoded]
 
         # Load the trained model
-        with open("/content/medical_model.dat", "rb") as f:
+        with open("medical_model.dat", "rb") as f:
             model = pickle.load(f)
 
         # Make prediction
