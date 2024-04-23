@@ -25,11 +25,11 @@ if submitted:
         input_data = [[age, sex, bmi, children, smoker] + region_encoded]
 
         # Load the trained model
-        with open("medical_model.dat", "rb") as f:
+        with open("/content/medical_model.dat", "rb") as f:
             model = pickle.load(f)
 
         # Make prediction
         output = model.predict(input_data)
 
         # Display prediction
-        st.write(f"The predicted medical cost is: {float(output[0])} $")
+        st.write(f"The predicted medical cost is: {output[0]:0.2f} $")
